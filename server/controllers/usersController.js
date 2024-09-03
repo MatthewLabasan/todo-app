@@ -4,25 +4,29 @@ const bcrypt = require('bcrypt')
 const crypto = require('crypto');
 
 // @desc Get user info
-// @route GET /users
-// @access Private (not implemented yet)
-const getAllUsers = asyncHandler(async(req, res) => {
+// @route POST /users/auth
+const getUserInfo = asyncHandler(async(req, res) => {
     const { username, password } = req.body
-    const hashedPassword = await bcrypt.hash(password, 10)
     
-    const user = await User.findOne({ username, password: hashedPassword })
-
+    const user = await User.findOne({ username })
     if (!user) {
-        return res.status(400).json({ message: "No user found." })  
+        return res.status(400).json({ message: "Username not found.", authorized: false })  
     }  
-    return res.status(200).json({ tasks: user.tasks }) 
+
+    // verify password
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (isMatch) {
+        return res.status(200).json({ message: "Success!", authToken: user.authToken, authorized: true }) 
+    }
+    return res.status(200).json({ message: "Incorrect Password.", authorized: false })
 })
 
-// @desc Create new user
+// @desc Create or access new user
 // @route POST /users
 // For subscribing handling
 const createNewUsers = asyncHandler(async(req, res) => {
-    const { username, password } = req.body
+    let { username, password } = req.body
+    username = username.toLowerCase()
 
     const existingUser = await User.findOne({ username })
     if (existingUser) {
@@ -53,7 +57,7 @@ const deleteUsers = asyncHandler(async(req, res) => {
 
 
 module.exports = {
-    getAllUsers,
+    getUserInfo,
     createNewUsers,
     updateUsers,
     deleteUsers

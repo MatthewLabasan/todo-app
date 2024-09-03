@@ -3,9 +3,11 @@ const router = express.Router()
 const tasksController = require('../controllers/tasksController')
 
 router.route('/')
-    .get(tasksController.getAllTasks)
     .post(tasksController.createNewTasks)
     .patch(tasksController.updateTasks)
     .delete(tasksController.deleteTasks)
 
+// to allow auth in body
+router.route('/list')
+    .post(tasksController.getAllTasks)
 module.exports = router

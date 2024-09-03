@@ -2,15 +2,16 @@ const asyncHandler = require('express-async-handler')
 const Task = require('../models/Task')
 const User = require('../models/User')
 
-
+// @desc Create new task based on user info
+// @route POST /tasks/list
 const getAllTasks = asyncHandler(async(req, res) => {
     const { authToken } = req.body
-    const user = await User.findOne({ authToken })
-    console.log(user)
+    const user = await User.findOne({ authToken }).populate('tasks').exec()
     if (!user) {
         return res.status(400).json({ message: "Invalid authorization."})
     }
     const tasks = user.tasks
+    console.log(tasks)
     return res.status(200).json({ tasks })
 })
 
@@ -42,7 +43,7 @@ const createNewTasks = asyncHandler(async(req, res) => {
 const updateTasks = asyncHandler(async(req, res) => { 
     const { authToken, taskID, completed } = req.body 
 
-    // update
+    
    await User.findOne(
         { 
             "authToken": authToken,
