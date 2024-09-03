@@ -42,7 +42,7 @@ const TaskList = () => {
                 </tr>
                 </thead>
                 <tbody>
-                {taskList.map(task => (
+                {taskList2.map(task => (
                     <tr key={task._id}>
                     <th>
                         <button className="btn btn-square btn-outline">
