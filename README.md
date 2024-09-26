@@ -17,15 +17,15 @@ Testing: Postman and manual testing through frontend
 - Implemented user creation, user login authentication (string check), and task creation and deletion for specific users.
 
 ## API Tests
-![User Creation]("./samples/API Tests/1.png")
+![User Creation](./samples/apiTests/1.png)
 
-![User Authentication]("./samples/API Tests/2.png")
+![User Authentication](./samples/apiTests/2.png)
 
-![Grabbing Tasks From Specific Users]("./samples/API Tests/3.png")
+![Grabbing Tasks From Specific Users](./samples/apiTests/3.png)
 
-![Task Creation]("./samples/API Tests/4.png")
+![Task Creation](./samples/apiTests/4.png)
 
-![Task Deletion]("./samples/API Tests/5.png")
+![Task Deletion](./samples/apiTests/5.png)
 
 ## Frontend Work
 - Utilized DaisyUI and TailwindCSS for quick implementation.
