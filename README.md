@@ -1,7 +1,7 @@
 # todo-app
 
 ## Demo
-![To Do App Demo](samples/To Do App Demo Gif.gif)
+![To Do App Demo]("samples/ToDoAppDemoGif.gif")
 
 ## Tech Stack
 Backend: Express.js, MongoDB / Mongoose
@@ -17,11 +17,11 @@ Testing: Postman and manual testing through frontend
 - Implemented user creation, user login authentication (string check), and task creation and deletion for specific users.
 
 ## API Tests
-![User Creation](samples/API Tests/1.png)
-![User Authentication](samples/API Tests/2.png)
-![Grabbing Tasks From Specific Users](samples/API Tests/3.png)
-![Task Creation](samples/API Tests/4.png)
-![Task Deletion](samples/API Tests/5.png)
+![User Creation]("samples/API Tests/1.png")
+![User Authentication]("samples/API Tests/2.png")
+![Grabbing Tasks From Specific Users]("samples/API Tests/3.png")
+![Task Creation]("samples/API Tests/4.png")
+![Task Deletion]("samples/API Tests/5.png")
 
 ## Frontend Work
 - Utilized DaisyUI and TailwindCSS for quick implementation.
