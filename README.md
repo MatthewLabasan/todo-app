@@ -1,7 +1,7 @@
 # todo-app
 
 ## Demo
-![To Do App Demo]("samples/ToDoAppDemoGif.gif")
+![To Do App Demo](./samples/ToDoAppDemoGif.gif)
 
 ## Tech Stack
 Backend: Express.js, MongoDB / Mongoose
