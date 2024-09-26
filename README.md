@@ -1,5 +1,5 @@
 # todo-app
-This is a artially completed to do app with string authentication for external application. Backend API has been completed. Main front end functionalities have not yet been completed.
+This is a partially completed to do app with string authentication. Backend API has been completed. Main front end functionalities have not yet been completed.
 
 ## Demo
 ![To Do App Demo](./samples/ToDoAppDemoGif.gif)
