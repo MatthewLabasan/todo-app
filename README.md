@@ -5,15 +5,16 @@ This is a partially completed to do app with string authentication. Backend API 
 ![To Do App Demo](./samples/ToDoAppDemoGif.gif)
 
 ## Tech Stack
-Backend: Express.js, MongoDB / Mongoose
+__Backend__: Express.js, MongoDB / Mongoose
 
-Frontend: React, TailwindCSS, DaisyUI
+__Frontend__: React, TailwindCSS, DaisyUI
 
-Testing: Postman and manual testing through frontend
+__Testing__: Postman and manual testing through frontend
 
 ## Database Models
 - Created a user and task model, where users held an array of references to their associated tasks.
 - The user model stored an encrypted password as well as a simple authToken for string authentication.
+
 ![Schema](./samples/apiTests/6.png)
 
 ## Server API
