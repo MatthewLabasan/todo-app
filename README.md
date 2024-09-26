@@ -1,4 +1,4 @@
-# todo-app
+# To Do App
 This is a partially completed to do app with string authentication. Backend API has been completed. Main front end functionalities have not yet been completed.
 
 ## Demo
@@ -6,13 +6,15 @@ This is a partially completed to do app with string authentication. Backend API 
 
 ## Tech Stack
 Backend: Express.js, MongoDB / Mongoose
+
 Frontend: React, TailwindCSS, DaisyUI
+
 Testing: Postman and manual testing through frontend
 
 ## Database Models
 - Created a user and task model, where users held an array of references to their associated tasks.
 - The user model stored an encrypted password as well as a simple authToken for string authentication.
-![Schema](samples/API Tests/6.png)
+![Schema](./samples/apiTests/6.png)
 
 ## Server API
 - Implemented user creation, user login authentication (string check), and task creation and deletion for specific users.
