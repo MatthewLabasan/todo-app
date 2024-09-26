@@ -17,7 +17,7 @@ Testing: Postman and manual testing through frontend
 - Implemented user creation, user login authentication (string check), and task creation and deletion for specific users.
 
 ## API Tests
-![User Creation](./samples/APITests/1.png)
+![User Creation](./samples/API Tests/1.png)
 
 ![User Authentication](./samples/API Tests/2.png)
 
